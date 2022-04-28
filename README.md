@@ -14,6 +14,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `to run the server`
+node index.js
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
@@ -46,7 +49,23 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
-### note for me
+### `note for react`
 npm i -save react-query
 
 npm i -save react-query-auth
+
+### `note for express`
+npm install express --save
+npm install mysql --save
+npm install cors --save
+npm install jsonwebtoken --save
+npm install --save bcrypt
+npm install --save sequelize
+npm i -D typescript @types/express @types/node
+npm install --save-dev tslint
+npm install --save sequelize
+npm i --save mysql2
+
+### to import in typescript
+const users = await import("./yourModuleThatExportsUsers");
+import users = require("./yourModuleThatExportsUsers");

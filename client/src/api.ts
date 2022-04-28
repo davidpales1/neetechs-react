@@ -11,12 +11,13 @@ export interface User {
   name?: string;
 }
 
-const API_URL = "https://my-server/api";
+const Server_URL = "http://localhost:8080";
 
 export async function handleApiResponse(response: { json: () => any; ok: any; }) {
   const data = await response.json();
 
   if (response.ok) {
+    console.log(data)
     return data;
   } else {
     return Promise.reject(data);
@@ -24,7 +25,7 @@ export async function handleApiResponse(response: { json: () => any; ok: any; })
 }
 
 export async function getUserProfile() {
-  return await fetch(`${API_URL}/auth/me`, {
+  return await fetch(`${Server_URL}/api/auth/me`, {
     headers: {
       Authorization: storage.getToken()
     }
@@ -33,7 +34,7 @@ export async function getUserProfile() {
 
 export async function loginWithEmailAndPassword(data: any): Promise<AuthResponse> {
   return window
-    .fetch(`${API_URL}/auth/login`, {
+    .fetch(`${Server_URL}/api/auth/signin`, {
       method: "POST",
       body: JSON.stringify(data)
     })
@@ -44,7 +45,7 @@ export async function registerWithEmailAndPassword(
   data: any
 ): Promise<AuthResponse> {
   return window
-    .fetch(`${API_URL}/auth/register`, {
+    .fetch(`${Server_URL}/api/auth/signup`, {
       method: "POST",
       body: JSON.stringify(data)
     })

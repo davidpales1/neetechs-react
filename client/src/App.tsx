@@ -6,7 +6,7 @@ import { Auth } from "./components/Auth";
 
 function App() {
   const { user } = useAuth();
-  return user ?  <UserInfo /> : <Auth />
+  return user ?  <Auth />  : <UserInfo />
 }
 
 export default App;

@@ -1,6 +1,5 @@
 import React from 'react';
-// @ts-ignore
-import styled from 'styled-components';
+
 import { useTable, usePagination } from 'react-table';
 import { useQuery } from 'react-query';
 
@@ -17,38 +16,6 @@ export const fetchPokemonData = async (page:any, pageSize:any) => {
       throw new Error(`API error:${e}`);
     }
   };
-const TableContainer = styled.div`
-  padding: 1rem;
-
-  table {
-    border-spacing: 0;
-    border: 1px solid black;
-
-    tr {
-      :last-child {
-        td {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    th,
-    td {
-      margin: 0;
-      padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-
-      :last-child {
-        border-right: 0;
-      }
-    }
-  }
-
-  .pagination {
-    padding: 0.5rem;
-  }
-`;
 
 const columns = [
   {
@@ -173,7 +140,7 @@ function PokemonTable() {
   }
 
   return (
-    <TableContainer>
+    <div>
       {isSuccess ? (
         <>
           <table {...getTableProps()}>
@@ -250,7 +217,7 @@ function PokemonTable() {
           </div>
         </>
       ) : null}
-    </TableContainer>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 module.exports = {
     HOST: "localhost",
     USER: "root",
-    PASSWORD: "Free48palestine",
+    PASSWORD: "2",
     DB: "neetechs_react",
     dialect: "mysql",
     pool: {

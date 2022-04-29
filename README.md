@@ -70,7 +70,8 @@ npm i --save react-router-dom
 npm i --save yup
 npm i --save formik
 npm i --save react-validation
-
+npm i --save axios
+npm i --save bootstrap
 ### to import in typescript
 const users = await import("./yourModuleThatExportsUsers");
 import users = require("./yourModuleThatExportsUsers");

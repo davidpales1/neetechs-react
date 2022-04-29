@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL = "http://localhost:8080/api/auth/";
 
 class AuthService {
-  login(username, password) {
+  login(username:any, password:any) {
     return axios
       .post(API_URL + "signin", {
         username,
@@ -22,7 +22,7 @@ class AuthService {
     localStorage.removeItem("user");
   }
 
-  register(username, email, password) {
+  register(username:any, email:any, password:any) {
     return axios.post(API_URL + "signup", {
       username,
       email,
@@ -31,7 +31,7 @@ class AuthService {
   }
 
   getCurrentUser() {
-    return JSON.parse(localStorage.getItem('user'));;
+    return JSON.parse(localStorage.getItem('user')!);;
   }
 }
 

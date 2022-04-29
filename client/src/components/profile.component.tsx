@@ -1,7 +1,8 @@
 import React from "react";
 import AuthService  from "../services/auth.service";
+import PokemonTable  from "./Table.component";
 
-const Profile: React.FC = () => {
+const Profile: React.FC = (Table) => {
   const currentUser = AuthService.getCurrentUser();
 
   return (
@@ -26,6 +27,7 @@ const Profile: React.FC = () => {
         {currentUser.roles &&
           currentUser.roles.map((role: string, index: number) => <li key={index}>{role}</li>)}
       </ul>
+      <PokemonTable />
     </div>
   );
 };

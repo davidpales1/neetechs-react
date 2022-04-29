@@ -72,6 +72,12 @@ npm i --save formik
 npm i --save react-validation
 npm i --save axios
 npm i --save bootstrap
+npm i --save styled-components
+
+# react table
+npm i --save react-table
+npm config set legacy-peer-deps true
+
 ### to import in typescript
 const users = await import("./yourModuleThatExportsUsers");
 import users = require("./yourModuleThatExportsUsers");

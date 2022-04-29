@@ -2,9 +2,7 @@ export const storage = {
 
     getToken: () => {
       if(window.localStorage.getItem("token")){
-        return JSON.parse(window.localStorage.getItem("token") || '[]')
-      }else{
-        return JSON.parse('{"token":true')
+        return JSON.parse(window.localStorage.getItem("token")!)
       }
 },
     setToken: (token: any) =>

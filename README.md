@@ -15,7 +15,7 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### `to run the server`
-node index.js
+node index.tsx
 
 ### `npm test`
 
@@ -65,6 +65,11 @@ npm i -D typescript @types/express @types/node
 npm install --save-dev tslint
 npm install --save sequelize
 npm i --save mysql2
+npm i --save msw
+npm i --save react-router-dom
+npm i --save yup
+npm i --save formik
+npm i --save react-validation
 
 ### to import in typescript
 const users = await import("./yourModuleThatExportsUsers");

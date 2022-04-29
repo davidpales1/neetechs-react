@@ -15,6 +15,7 @@ const Server_URL = "http://localhost:8080";
 
 export async function handleApiResponse(response: { json: () => any; ok: any; }) {
   const data = await response.json();
+  console.log(data)
 
   if (response.ok) {
     console.log(data)
